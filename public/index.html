@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+  <h1>MMM APP!</h1>
+  <div data-ng-app="mmmApp">
+    <div data-ng-controller="mmmCtrl">
+      <label>Mean, Median, Mode</label><br>
+      <input type="text" data-ng-model="mmm.input" data-ng-change="onClick()">
+      <button data-ng-click="calculate()">Calculate</button>
+      <div data-ng-hide="hiddenMMM">
+        <p>Mean: {{mmm.mean}}</p>
+        <p>Median: {{mmm.median}}</p>
+        <p>Mode: {{mmm.mode}}</p>
+      </div>
+    </div>
+  </div>
+  <script src="bundle.js"></script>
+</body>
+</html>
